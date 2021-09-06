@@ -1,0 +1,97 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="close()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Detalhes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-text><b>Nome (Contato):</b> {{data.nameContact}}</ion-text>
+
+  <br />
+  <br />
+
+  <ion-text><b>E-mail (Contato):</b> {{data.emailContact}}</ion-text>
+
+  <br />
+  <br />
+
+  <ion-text><b>Telefone/Ramal (Contato):</b> {{data.phoneContact}}</ion-text>
+
+  <br />
+  <br />
+
+  <ion-text><b>Nome Fantasia:</b> {{data.nameFantasy}}</ion-text>
+
+  <br />
+  <br />
+
+  <ion-text><b>E-mail:</b> {{data.email}}</ion-text>
+
+
+  <br />
+  <br />
+
+  <ion-text><b>Telefone Comercial:</b> {{data.phoneCorp}}</ion-text>
+
+  <br />
+  <br />
+
+  <ion-text><b>CNPJ:</b> {{data.cnpj}}</ion-text>
+
+
+  <br />
+  <br />
+
+  <ion-text><b>CEP:</b> {{data.cep}}</ion-text>
+
+
+  <br />
+  <br />
+
+  <ion-text><b>Endereço:</b> {{data.street}}</ion-text>
+
+  <br />
+  <br />
+
+  <ion-text><b>Bairro:</b> {{data.district}}</ion-text>
+
+  <br />
+  <br />
+
+  <ion-text><b>Cidade:</b> {{data.city}}</ion-text>
+
+  <br />
+  <br />
+
+  <ion-text><b>Estado:</b> {{data.state}}</ion-text>
+
+  <br />
+  <br />
+
+  <ion-text><b>Quantidade Funcionários:</b> {{data.numberEmployees}}</ion-text>
+
+  <br />
+  <br />
+
+  <ion-text><b>Porte da Empresa:</b> {{porteEmpresa()}}</ion-text>
+
+  <br />
+  <br />
+
+  <ion-button class="ion-no-margin" expand="block" (click)="edit()">
+    Editar
+  </ion-button>
+
+  <br />
+
+  <ion-button color="danger" class="ion-no-margin" expand="block" (click)="delete()">
+    Deletar
+  </ion-button>
+
+</ion-content>

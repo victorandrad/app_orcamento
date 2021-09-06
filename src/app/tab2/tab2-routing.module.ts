@@ -6,6 +6,14 @@ const routes: Routes = [
   {
     path: '',
     component: Tab2Page,
+  },
+  {
+    path: 'add',
+    loadChildren: () => import('../pages/ferramenta/add/add.module').then( m => m.AddPageModule)
+  },
+  {
+    path: 'edit',
+    loadChildren: () => import('../pages/ferramenta/edit/edit.module').then( m => m.EditPageModule)
   }
 ];
 

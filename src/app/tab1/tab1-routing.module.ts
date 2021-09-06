@@ -6,6 +6,10 @@ const routes: Routes = [
   {
     path: '',
     component: Tab1Page,
+  },
+  {
+    path: 'cliente',
+    loadChildren: () => import('../pages/select-cliente/select-cliente.module').then( m => m.SelectClientePageModule)
   }
 ];
 

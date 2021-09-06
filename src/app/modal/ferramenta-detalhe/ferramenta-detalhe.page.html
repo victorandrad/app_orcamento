@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="close()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Detalhes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-text>
+    <b>Produto:</b> {{data.product}}
+  </ion-text>
+
+  <br/>
+  <br/>
+
+  <ion-text>
+    <b>Base - Pequeno Porte:</b> {{data.base_little}}
+  </ion-text>
+
+  <br/>
+  <br/>
+
+  <ion-text>
+    <b>Base - Médio Porte:</b> {{data.base_medium}}
+  </ion-text>
+
+  <br/>
+  <br/>
+
+  <ion-text>
+    <b>Base - Grande Porte:</b> {{data.base_big}}
+  </ion-text>
+
+  <br/>
+  <br/>
+
+  <ion-button 
+    class="ion-no-margin" 
+    expand="block"
+    (click)="edit()"
+  >
+    Editar
+  </ion-button>
+
+  <br/>
+
+  <ion-button 
+    color="danger" 
+    class="ion-no-margin" 
+    expand="block"
+    (click)="delete()"
+  >
+    Deletar
+  </ion-button>
+
+</ion-content>

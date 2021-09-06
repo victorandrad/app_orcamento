@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="close()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Editar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-item class="ion-no-padding">
+    <ion-label position="stacked">Produto</ion-label>
+    <ion-input [(ngModel)]="produto"></ion-input>
+  </ion-item>
+
+  <br />
+
+  <ion-item class="ion-no-padding">
+    <ion-label position="stacked">Base - Pequeno Porte</ion-label>
+    <ion-input required type="tel" [(ngModel)]="basePequeno"></ion-input>
+  </ion-item>
+
+  <br />
+
+  <ion-item class="ion-no-padding">
+    <ion-label position="stacked">Base - Médio Porte</ion-label>
+    <ion-input required type="tel" [(ngModel)]="baseMedio"></ion-input>
+  </ion-item>
+
+  <br />
+
+  <ion-item class="ion-no-padding">
+    <ion-label position="stacked">Base - Grande Porte</ion-label>
+    <ion-input required type="tel" [(ngModel)]="baseGrande"></ion-input>
+  </ion-item>
+
+  <br />
+
+  <ion-button required class="ion-no-margin" (click)="update()" expand="block">Atualizar</ion-button>
+
+</ion-content>

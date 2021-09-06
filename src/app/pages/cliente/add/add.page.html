@@ -1,0 +1,117 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Adicionar Cliente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <form [formGroup]="ClienteForm" (ngSubmit)="add()">
+    <ion-item class="ion-no-padding">
+      <ion-label position="stacked">Nome (Contato)</ion-label>
+      <ion-input required formControlName="nomeContato"></ion-input>
+    </ion-item>
+
+    <br />
+
+    <ion-item class="ion-no-padding">
+      <ion-label position="stacked">E-mail (Contato)</ion-label>
+      <ion-input required formControlName="emailContato"></ion-input>
+    </ion-item>
+
+    <br />
+
+    <ion-item class="ion-no-padding">
+      <ion-label position="stacked">Telefone/Ramal (Contato)</ion-label>
+      <ion-input required formControlName="telefoneContato"></ion-input>
+    </ion-item>
+
+    <br />
+
+    <ion-item class="ion-no-padding">
+      <ion-label position="stacked">Nome Fantasia</ion-label>
+      <ion-input required formControlName="nomeFantasia"></ion-input>
+    </ion-item>
+
+    <br />
+
+    <ion-item class="ion-no-padding">
+      <ion-label position="stacked">E-mail</ion-label>
+      <ion-input required formControlName="email"></ion-input>
+    </ion-item>
+
+    <br />
+
+    <ion-item class="ion-no-padding">
+      <ion-label position="stacked">Telefone Comercial</ion-label>
+      <ion-input required formControlName="telefoneComercial"></ion-input>
+    </ion-item>
+
+    <br />
+
+    <ion-item class="ion-no-padding">
+      <ion-label position="stacked">CNPJ</ion-label>
+      <ion-input required formControlName="cnpj"></ion-input>
+    </ion-item>
+
+    <br />
+
+    <ion-item class="ion-no-padding">
+      <ion-label position="stacked">CEP</ion-label>
+      <ion-input required formControlName="cep"></ion-input>
+    </ion-item>
+
+    <br />
+
+    <ion-item class="ion-no-padding">
+      <ion-label position="stacked">Endereço</ion-label>
+      <ion-input required formControlName="endereco"></ion-input>
+    </ion-item>
+
+    <br />
+
+    <ion-item class="ion-no-padding">
+      <ion-label position="stacked">Bairro</ion-label>
+      <ion-input required formControlName="bairro"></ion-input>
+    </ion-item>
+
+    <br />
+
+    <ion-item class="ion-no-padding">
+      <ion-label position="stacked">Cidade</ion-label>
+      <ion-input required formControlName="cidade"></ion-input>
+    </ion-item>
+
+    <br />
+
+    <ion-item class="ion-no-padding">
+      <ion-label position="stacked">Estado</ion-label>
+      <ion-input required formControlName="estado"></ion-input>
+    </ion-item>
+
+    <br />
+
+    <ion-item class="ion-no-padding">
+      <ion-label position="stacked">Quantidade Funcionários</ion-label>
+      <ion-input required formControlName="qtdFuncionarios"></ion-input>
+    </ion-item>
+
+    <br />
+
+    <ion-item class="ion-no-padding">
+      <ion-label position="stacked">Porte da Empresa</ion-label>
+      <ion-select required [(ngModel)]="porteEmpresa" formControlName="porteEmpresa" placeholder="Selecione o porte da empresa">
+        <ion-select-option value="p">Pequeno Porte</ion-select-option>
+        <ion-select-option value="m">Médio Porte</ion-select-option>
+        <ion-select-option value="g">Grande Porte</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <br />
+
+    <ion-button required class="ion-no-margin" type="submit" expand="block">Cadastrar</ion-button>
+  </form>
+</ion-content>

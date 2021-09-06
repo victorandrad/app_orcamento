@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Adicionar Ferramenta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <form [formGroup]="ferramentaForm" (ngSubmit)="add()">
+    <ion-item class="ion-no-padding">
+      <ion-label position="stacked">Produto</ion-label>
+      <ion-input formControlName="produto"></ion-input>
+    </ion-item>
+
+    <br />
+
+    <ion-item class="ion-no-padding">
+      <ion-label position="stacked">Base - Pequeno Porte</ion-label>
+      <ion-input required type="tel" formControlName="basePequeno"></ion-input>
+    </ion-item>
+
+    <br />
+
+    <ion-item class="ion-no-padding">
+      <ion-label position="stacked">Base - Médio Porte</ion-label>
+      <ion-input required type="tel" formControlName="baseMedio"></ion-input>
+    </ion-item>
+
+    <br />
+
+    <ion-item class="ion-no-padding">
+      <ion-label position="stacked">Base - Grande Porte</ion-label>
+      <ion-input required type="tel" formControlName="baseGrande"></ion-input>
+    </ion-item>
+
+    <br/>
+
+    <ion-button required class="ion-no-margin" type="submit" expand="block">Cadastrar</ion-button>
+  </form>
+</ion-content>

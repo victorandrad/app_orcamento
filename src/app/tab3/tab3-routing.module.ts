@@ -6,6 +6,14 @@ const routes: Routes = [
   {
     path: '',
     component: Tab3Page,
+  },
+  {
+    path: 'add',
+    loadChildren: () => import('../pages/cliente/add/add.module').then( m => m.AddPageModule)
+  },
+  {
+    path: 'edit',
+    loadChildren: () => import('../pages/cliente/edit/edit.module').then( m => m.EditPageModule)
   }
 ];
 

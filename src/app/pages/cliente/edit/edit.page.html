@@ -1,0 +1,118 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="close()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Editar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-item class="ion-no-padding">
+    <ion-label position="stacked">Nome (Contato)</ion-label>
+    <ion-input [(ngModel)]="nomeContato"></ion-input>
+  </ion-item>
+
+  <br />
+
+  <ion-item class="ion-no-padding">
+    <ion-label position="stacked">E-mail (Contato)</ion-label>
+    <ion-input [(ngModel)]="emailContato"></ion-input>
+  </ion-item>
+
+  <br />
+
+  <ion-item class="ion-no-padding">
+    <ion-label position="stacked">Telefone/Ramal (Contato)</ion-label>
+    <ion-input [(ngModel)]="telefoneContato"></ion-input>
+  </ion-item>
+
+  <br />
+
+  <ion-item class="ion-no-padding">
+    <ion-label position="stacked">Nome Fantasia</ion-label>
+    <ion-input [(ngModel)]="nomeFantasia"></ion-input>
+  </ion-item>
+
+  <br />
+
+  <ion-item class="ion-no-padding">
+    <ion-label position="stacked">E-mail</ion-label>
+    <ion-input [(ngModel)]="email"></ion-input>
+  </ion-item>
+
+  <br />
+
+  <ion-item class="ion-no-padding">
+    <ion-label position="stacked">Telefone Comercial</ion-label>
+    <ion-input [(ngModel)]="telefoneComercial"></ion-input>
+  </ion-item>
+
+  <br />
+
+  <ion-item class="ion-no-padding">
+    <ion-label position="stacked">CNPJ</ion-label>
+    <ion-input [(ngModel)]="cnpj"></ion-input>
+  </ion-item>
+
+  <br />
+
+  <ion-item class="ion-no-padding">
+    <ion-label position="stacked">CEP</ion-label>
+    <ion-input [(ngModel)]="cep"></ion-input>
+  </ion-item>
+
+  <br />
+
+  <ion-item class="ion-no-padding">
+    <ion-label position="stacked">Endereço</ion-label>
+    <ion-input [(ngModel)]="endereco"></ion-input>
+  </ion-item>
+
+  <br />
+
+  <ion-item class="ion-no-padding">
+    <ion-label position="stacked">Bairro</ion-label>
+    <ion-input [(ngModel)]="bairro"></ion-input>
+  </ion-item>
+
+  <br />
+
+  <ion-item class="ion-no-padding">
+    <ion-label position="stacked">Cidade</ion-label>
+    <ion-input [(ngModel)]="cidade"></ion-input>
+  </ion-item>
+
+  <br />
+
+  <ion-item class="ion-no-padding">
+    <ion-label position="stacked">Estado</ion-label>
+    <ion-input [(ngModel)]="estado"></ion-input>
+  </ion-item>
+
+  <br />
+
+  <ion-item class="ion-no-padding">
+    <ion-label position="stacked">Quantidade Funcionários</ion-label>
+    <ion-input [(ngModel)]="qtdFuncionarios"></ion-input>
+  </ion-item>
+
+  <br />
+
+  <ion-item class="ion-no-padding">
+    <ion-label position="stacked">Porte da Empresa</ion-label>
+    <ion-select [(ngModel)]="porteEmpresa" placeholder="Selecione o porte da empresa">
+      <ion-select-option value="p">Pequeno Porte</ion-select-option>
+      <ion-select-option value="m">Médio Porte</ion-select-option>
+      <ion-select-option value="g">Grande Porte</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <br/>
+
+  <ion-button class="ion-no-margin" (click)="update()" expand="block">Atualizar</ion-button>
+
+</ion-content>

@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Selecione as ferramentas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item>
+      <ion-label position="stacked">Imposto %</ion-label>
+      <ion-input [(ngModel)]="imposto"></ion-input>
+    </ion-item>
+
+    <br/>
+
+    <ion-item>
+      <ion-label position="stacked">Comissão %</ion-label>
+      <ion-input [(ngModel)]="comissao"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-radio-group [(ngModel)]="tipoVenda" value="pr">
+      <ion-list-header>
+        <ion-label>Tipo de Venda</ion-label>
+      </ion-list-header>
+
+      <ion-item>
+        <ion-label>Própria</ion-label>
+        <ion-radio selected slot="start" value="pr"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Parceiro</ion-label>
+        <ion-radio slot="start" value="pa"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+
+  <br />
+  <br />
+
+  <ion-list>
+    <ion-item *ngFor="let f of ferramentas">
+      <ion-label>{{f.product}}</ion-label>
+      <ion-checkbox slot="start" [(ngModel)]="f.isChecked"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-button (click)="resumo()" expand="block">Próximo</ion-button>
+</ion-footer>

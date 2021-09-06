@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Resumo do orçamento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-text>
+    <b>Nome do Cliente (Contato):</b> {{resumo.nameContact}}
+  </ion-text>
+
+  <br />
+  <br />
+
+  <ion-text>
+    <b>Porte da Empresa:</b> {{porteEmpresa()}}
+  </ion-text>
+
+  <br />
+  <br />
+
+  <ion-text>
+    <b>E-mail:</b> {{resumo.email}}
+  </ion-text>
+
+  <br />
+  <br />
+
+  <ion-text>
+    <b>Quantidade usuários:</b> {{resumo.numberEmployees}}
+  </ion-text>
+
+  <br />
+  <br />
+
+  <ion-text>
+    <b>Produtos</b>
+  </ion-text>
+
+  <br />
+  <br />
+
+  <ion-list>
+    <ion-item *ngFor="let f of resumo.ferramentas">
+      <div>
+        {{f.product}}
+        
+        <br/>
+        <br/>
+
+        <b>Valor sem imposto:</b> {{valorSemImposto(resumo, f) | currency:"BRL":true:"1.2" }}
+
+        <br/>
+        <br/>
+
+        <b>Valor com imposto:</b> {{valorComImposto(resumo, f) | currency:"BRL":true:"1.2" }}
+
+        <br/>
+        <br/>
+
+        <b>Valor parceiro:</b> {{valorParceiro(resumo, f) | currency:"BRL":true:"1.2" }}
+
+        <br/>
+        <br/>
+      </div>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
