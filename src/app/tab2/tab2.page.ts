@@ -20,6 +20,10 @@ export class Tab2Page {
   ) { }
 
   ngOnInit() {
+    
+  }
+
+  ionViewWillEnter() {
     this.ferramentaService.index().then(response => {
       this.ferramentas = response;
     });

@@ -19,7 +19,10 @@ export class Tab3Page {
     private routerOutlet: IonRouterOutlet
   ) { }
 
-  ngOnInit() {
+  ngOnInit() { 
+  }
+
+  ionViewWillEnter() {
     this.clienteService.index().then(response => {
       this.clientes = response;
     });
